@@ -35,23 +35,8 @@ sockjs_echo.on('connection', function(conn) {
     });
 });
 
-app.set('port', process.env.PORT || 3000);
-
-// var server = require('http').createServer(app);
-
-// var port =  process.env.PORT || 9999;
-
-app.listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
-
-// console.log(' [*] Listening on 0.0.0.0:' + port );
-// server.listen(port, '0.0.0.0');
-
-sockjs_echo.installHandlers(app, {prefix:'/chat'});
-
-
 // view engine setup
+app.set('port1', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
@@ -97,6 +82,16 @@ app.use(function(err, req, res, next) {
         error: {}
     });
 });
+
+var server = require('http').createServer(app);
+
+//var port =  process.env.PORT || 9999;
+
+var server = server.listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
+
+sockjs_echo.installHandlers(server, {prefix:'/chat'});
 
 
 module.exports = app;
