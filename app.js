@@ -35,6 +35,8 @@ sockjs_echo.on('connection', function(conn) {
     });
 });
 
+app.set('port', 3000);
+
 var server = require('http').createServer(app);
 
 var port =  process.env.PORT || 9999;
