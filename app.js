@@ -10,13 +10,6 @@ var users = require('./routes/users');
 
 var app = express();
 
-var server = require('http').createServer(app);
-
-var port =  9999;
-
-console.log(' [*] Listening on 0.0.0.0:' + port );
-server.listen(port, '0.0.0.0');
-
 var sockjs = require('sockjs');
 
 // sockjs server
@@ -41,6 +34,13 @@ sockjs_echo.on('connection', function(conn) {
         }
     });
 });
+
+var server = require('http').createServer(app);
+
+var port =  process.env.PORT || 9999;
+
+console.log(' [*] Listening on 0.0.0.0:' + port );
+server.listen(port, '0.0.0.0');
 
 sockjs_echo.installHandlers(server, {prefix:'/chat'});
 
