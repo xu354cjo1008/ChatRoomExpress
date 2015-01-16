@@ -1,0 +1,35 @@
+block content
+	.container-fluid
+		.starter-template
+			h1 Project
+			p.lead Use this page to build project page.
+		.main-container
+			#projects-wall.center-text
+				.project-block
+					.project-item
+						img.imag-thumbnail(ng-src = "/images/3560-4.jpg")
+						.detail
+							h3 Test 1
+							p Sed in molestie lectus. Curabitur non est neque.
+							span.btn View
+				.project-block
+					.project-item
+						img.imag-thumbnail(ng-src = "/images/3560-4.jpg")
+						.detail
+							h3 Test 2
+							p Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt.
+							span.btn View
+				.project-block
+					.project-item
+						img.imag-thumbnail(ng-src = "/images/3560-4.jpg")
+						.detail
+							h3 Test 3
+							p Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt.
+							span.btn View
+				.project-block(ng-repeat="project in projects")
+					.project-item
+						img.imag-thumbnail(ng-src = "{{project.imageUrl}}")
+						.detail
+							h3 {{project.name}}
+							p Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt.
+							span.btn View

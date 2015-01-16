@@ -1,0 +1,10 @@
+block content
+	.container-fluid
+		.starter-template
+			h1 Welcome to Chat
+			div(ng-controller = "ChatRoomCtrl")
+				ul
+					li(ng-repeat = "message in messages track by $index") {{message}}
+				form(ng-submit = "sendMessage()")
+					input(type = "text" ng-model = "messageText" placeholder = "Type your message here")
+					input(type = "submit" value = "Send")
