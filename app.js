@@ -37,7 +37,7 @@ sockjs_echo.on('connection', function(conn) {
 
 var server = require('http').createServer(app);
 
-var port =  process.env.PORT || 5000;
+var port =  process.env.PORT || 9999;
 
 console.log(' [*] Listening on 0.0.0.0:' + port );
 server.listen(port, '0.0.0.0');
