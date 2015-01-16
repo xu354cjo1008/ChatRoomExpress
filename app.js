@@ -35,16 +35,20 @@ sockjs_echo.on('connection', function(conn) {
     });
 });
 
-app.set('port', 3000);
+app.set('port', process.env.PORT || 3000);
 
-var server = require('http').createServer(app);
+// var server = require('http').createServer(app);
 
-var port =  process.env.PORT || 9999;
+// var port =  process.env.PORT || 9999;
 
-console.log(' [*] Listening on 0.0.0.0:' + port );
-server.listen(port, '0.0.0.0');
+app.listen(app.get('port'), function(){
+  console.log('Express server listening on port ' + app.get('port'));
+});
 
-sockjs_echo.installHandlers(server, {prefix:'/chat'});
+// console.log(' [*] Listening on 0.0.0.0:' + port );
+// server.listen(port, '0.0.0.0');
+
+sockjs_echo.installHandlers(app, {prefix:'/chat'});
 
 
 // view engine setup
