@@ -13,7 +13,7 @@ var app = express();
 var server = require('http').createServer(app);
 
 console.log(' [*] Listening on 0.0.0.0:9999' );
-server.listen(process.env.PORT || 9999);
+server.listen(process.env.PORT || 9999, '0.0.0.0');
 
 var sockjs = require('sockjs');
 
