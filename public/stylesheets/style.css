@@ -161,3 +161,11 @@ span.btn {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
+
+.message-board {
+/*  width: 250px; 
+  height: 250px; */
+}
+.message-board .canvas {
+  height: 200px;
+}
