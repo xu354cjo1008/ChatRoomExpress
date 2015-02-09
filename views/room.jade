@@ -1,0 +1,19 @@
+block content
+	.container-fluid
+		.starter-template
+			h1 Welcome to Room!!
+			input(type = "text" ng-model = "rommName" placeholder = "Type room name here")
+			br
+			a(class="btn btn-primary" href = "#chatroom") Join
+			a(class="btn btn-primary" data-toggle="collapse" href="#chatroom" aria-expanded="false" aria-controls="chatroom") Build
+			table(id="room_list" class="table table-striped")
+				thead
+				tr
+					th RoomName
+					th Description
+					th Members
+				tbody
+				tr
+					td Test
+					td Join to talk!
+					td JJLee

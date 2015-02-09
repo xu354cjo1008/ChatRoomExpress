@@ -22,6 +22,9 @@ router.get('/project',function(req, res){
 router.get('/chatroom',function(req, res){
   res.render('chatroom');
 });
+router.get('/room',function(req, res){
+  res.render('room');
+});
 
 // router.get('/chat',function(req, res){
 //   res.render('chat');

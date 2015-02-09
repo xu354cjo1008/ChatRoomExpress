@@ -20,6 +20,8 @@ block content
             a(href='#project', ng-click= "tab.setTab(3)") Project
           li(ng-class= "{active:tab.isSet(4)}")
             a(href='#chatroom', ng-click= "tab.setTab(4)") Chat
+          li(ng-class= "{active:tab.isSet(5)}")
+            a(href='#room', ng-click= "tab.setTab(5)") Room
       ///.nav-collapse 
   ///.container 
   div(ng-view)
