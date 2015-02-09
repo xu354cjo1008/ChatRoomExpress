@@ -30,6 +30,8 @@ angular.module('myApp.routeConfig', ['ngRoute']).config(function($routeProvider)
     templateUrl: '/room'
   }).when('/chat', {
     templateUrl: '/chat'
+  }).when('/messageBoard', {
+    templateUrl: '/messageBoard'
   }).otherwise({
     redirectTo: '/home'
   });

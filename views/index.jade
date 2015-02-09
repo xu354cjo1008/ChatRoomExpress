@@ -22,6 +22,8 @@ block content
             a(href='#chatroom', ng-click= "tab.setTab(4)") Chat
           li(ng-class= "{active:tab.isSet(5)}")
             a(href='#room', ng-click= "tab.setTab(5)") Room
+          li(ng-class= "{active:tab.isSet(6)}")
+            a(href='#messageBoard', ng-click= "tab.setTab(6)") Message Board
       ///.nav-collapse 
   ///.container 
   div(ng-view)
