@@ -30,9 +30,9 @@ bower_components
 # Debug log from npm
 npm-debug.log
 
-.DS_Store
+*.DS_Store
 
 # CTags
-.tags
-.tags_sorted_by_file
+*.tags
+*.tags_sorted_by_file
 
