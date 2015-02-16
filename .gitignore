@@ -31,3 +31,6 @@ bower_components
 npm-debug.log
 
 .DS_Store
+
+# CTags
+.tags

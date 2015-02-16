@@ -47,6 +47,29 @@ p, form, ul { font-size: 14px; }
 .right { float: right; }
 .center-text { text-align: center; }
 
+/* About styles
+-----------------------------------------*/
+.about {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  text-align: left;
+}
+.about h1 {
+  text-align: center;
+}
+/*.about h2 {
+  text-align: center;
+}*/
+.about p {
+  margin-left: 20px;
+}
+.about img {
+  width:100%; 
+  height:100%; 
+}
+
+
 /*  Project styles
 -----------------------------------------*/
 #projects-wall {
@@ -160,6 +183,23 @@ span.btn {
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.project-intro {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  text-align: left;
+}
+.project-intro h1 {
+  text-align: center;
+}
+.project-intro p {
+  margin-left: 20px;
+}
+.project-intro img {
+  width:100%; 
+  height:100%; 
 }
 
 .message-board {

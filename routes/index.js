@@ -18,6 +18,11 @@ router.get('/about',function(req, res){
 router.get('/project',function(req, res){
   res.render('project');
 });
+/* Get Bee Searching Project Page */
+router.get('/projects/beeSearching',function(req, res){
+  res.render('projects/beeSearching');
+});
+
 /* Get Chat Page */
 router.get('/chatroom',function(req, res){
   res.render('chatroom');
