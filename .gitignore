@@ -33,5 +33,8 @@ npm-debug.log
 *.DS_Store
 
 # CTags
-.tags*
+*.tags
 
+/.tags
+/.gemtags
+/.tags_sorted_by_file
