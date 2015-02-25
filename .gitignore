@@ -35,5 +35,5 @@ npm-debug.log
 # CTags
 *.tags
 *.gemtags
-*.tags_sorted_by_file
+.tags_sorted_by_file
 *.cscope*
