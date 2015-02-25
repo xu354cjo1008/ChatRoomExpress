@@ -23,6 +23,11 @@ router.get('/projects/beeSearching',function(req, res){
   res.render('projects/beeSearching');
 });
 
+/* Get Heart Attack App Project Page */
+router.get('/projects/heartAttack',function(req, res){
+  res.render('projects/heartAttack');
+});
+
 /* Get Chat Page */
 router.get('/chatroom',function(req, res){
   res.render('chatroom');

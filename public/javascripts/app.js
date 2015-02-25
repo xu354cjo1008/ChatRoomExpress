@@ -26,6 +26,8 @@ angular.module('myApp.routeConfig', ['ngRoute']).config(function($routeProvider)
     templateUrl: '/project'
   }).when('/project/beeSearching', {
     templateUrl: '/projects/beeSearching'
+  }).when('/project/heartAttack', {
+    templateUrl: '/projects/heartAttack'
   }).when('/chatroom', {
     templateUrl: '/chatroom'
   }).when('/room', {

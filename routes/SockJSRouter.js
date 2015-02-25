@@ -2,7 +2,7 @@ var ChatRoom = require('../app/controllers/ChatRoom');
 
 var SockJSRouter;
 
-// room class 
+// room class
 SockJSRouter = (function() {
 	function SockJSRouter(server, socket) {
 		console.log("SockJSRouter created");
@@ -28,21 +28,30 @@ SockJSRouter = (function() {
 
 		this.socket.installHandlers(server, {prefix:'/socket'});
 
-		//test chatroom function 
+		//test chatroom function
 		// build a test chatroom
     	this.chatRoom = new ChatRoom('test');
 
 	}
 
 	SockJSRouter.prototype.connection = function(conn, user) {
-	    this.connections.push(conn);
+        for(var i = 0; i < sockjsRouterObj.connections.length; i++) {
+            if(sockjsRouterObj.connections[i] === undefined) sockjsRouterObj.connections[i] = conn;
+        } else {
+	        this.connections.push(conn);
+        }
 	    //join chat room
 	    this.chatRoom.join(user, conn);
 	};
 	SockJSRouter.prototype.route = function(user, message) {
-        this.chatRoom.notify(user, message);
+        var obj = JSON.parse(message);
+        this.chatRoom.notify(obj.name, obj.messageText);
+        //this.chatRoom.notify(message.name, message.messageText);
 	};
 	SockJSRouter.prototype.close = function(conn, user) {
+        for(var i = 0; i < sockjsRouterObj.connections.length; i++) {
+            if(conn === sockjsRouterObj[i]) delete sockjsRouterObj[i];
+        }
         this.chatRoom.quit(user);
 	};
 

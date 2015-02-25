@@ -1,10 +1,16 @@
 block content
-	.container-fluid
-		.starter-template
-			h1 Welcome to Chat!!
-			div(ng-controller = "ChatRoomCtrl as crc")
-				ul
-					li(ng-repeat = "message in messages track by $index") {{message}}
-				form(ng-submit = "crc.sendMessage()")
-					input(type = "text" ng-model = "messageText" placeholder = "Type your message here")
-					input(type = "submit" class="btn btn-primary" value = "Send")
+    .container-fluid
+        .starter-template
+            h1 Welcome to Chat!!
+            div(ng-controller = "ChatRoomCtrl as crc")
+                #canvas
+                    ul
+                        li(ng-repeat = "message in messages track by $index") {{message}}
+                form(ng-submit = "crc.sendMessage()")
+                    div.form-group
+                        label Your Name
+                        input(type = "text" ng-model = "name" placeholder = "Type Your Name")
+                    div.form-group
+                        label Text
+                        input(type = "text" ng-model = "messageText" placeholder = "Type your message here")
+                    input(type = "submit" class="btn btn-primary" value = "Send")

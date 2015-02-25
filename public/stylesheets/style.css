@@ -42,6 +42,7 @@ h2, h3, footer i { font-size: 18px; }
 
 p, form, ul { font-size: 14px; }
 
+
 .fa { margin: 6px; }
 .left { float: left; }
 .right { float: right; }
@@ -208,4 +209,8 @@ span.btn {
 }
 .message-board .canvas {
   height: 200px;
+}
+#canvas {
+    height: 300px;
+    overflow: auto;
 }

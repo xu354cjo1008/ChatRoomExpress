@@ -1,0 +1,27 @@
+block content
+    .container-fluid
+        .starter-template
+            .project-intro
+                h1 Heart Attack iOS Card Game App
+                    h2 1. Motivation
+                        p.
+                            This project is designed to present the study of Time Synchronization. 
+                            Because Heart Attact Card Game is a time critical game.
+                            That needs to detect the time of generated events to identify who is first and who is last.
+                    h2 2. Method
+                        p Precise Time Protocol
+                        p.
+                            Precise Time Protocal is a network protocol to measure the time difference between two computer.
+                            We use this protocol in our app.
+                        p Adaptive Kalman Filter
+                        p.
+                            Beacuse of the noise generated from random transmission time, muti-path problem or random computing time.
+                            The time difference mesured by Precise Time Protocol is noisy.
+                            We use Adaptive Kalman Filter to dynamic measure the noise from network enviroment, and conbine the noise from clock
+                            to predict a optimal time difference value.
+                        p PI controller
+                        p.
+                            Use this controller to modify our clock value and clock rate.
+                            Make our clock can track the clock we predict accurately and smoothly.
+                    h2 3. Game screenshot
+                        img(src = "/images/heartAttack2.png")

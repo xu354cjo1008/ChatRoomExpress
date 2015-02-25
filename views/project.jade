@@ -1,35 +1,35 @@
 block content
-	.container-fluid
-		.starter-template
-			h1 Project
-			p.lead Projects I have involved.
-		.main-container
-			#projects-wall.center-text
-				.project-block
-					.project-item
-						img.imag-thumbnail(ng-src = "/images/beeRadar.png")
-						.detail
-							h3 Bee Positioning Project
-							p Searching bee location by harmonic radar to find out that why bee are dying away
-							a.btn(href = "#project/beeSearching") View
-				.project-block
-					.project-item
-						img.imag-thumbnail(ng-src = "/images/groupDating.png")
-						.detail
-							h3 Group Dating Website
-							p Connecting people who doing different jobs or in different places.
-							a.btn(href = "http://payxpay.herokuapp.com/") View
-				.project-block
-					.project-item
-						img.imag-thumbnail(ng-src = "/images/3560-4.jpg")
-						.detail
-							h3 Heart Attack Card Game App
-							p Using Time Synchronization Theory to build a time critical game called heart attack. 
-							span.btn View
-				.project-block(ng-repeat="project in projects")
-					.project-item
-						img.imag-thumbnail(ng-src = "{{project.imageUrl}}")
-						.detail
-							h3 {{project.name}}
-							p Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt.
-							span.btn View
+    .container-fluid
+        .starter-template
+            h1 Project
+            p.lead Projects I have involved.
+        .main-container
+            #projects-wall.center-text
+                .project-block
+                    .project-item
+                        img.imag-thumbnail(ng-src = "/images/beeRadar.png")
+                        .detail
+                            h3 Bee Positioning Project
+                            p Searching bee location by harmonic radar to find out that why bee are dying away
+                            a.btn(href = "#project/beeSearching") View
+                .project-block
+                    .project-item
+                        img.imag-thumbnail(ng-src = "/images/groupDating.png")
+                        .detail
+                            h3 Group Dating Website
+                            p Connecting people who doing different jobs or in different places.
+                            a.btn(href = "http://payxpay.herokuapp.com/") View
+                .project-block
+                    .project-item
+                        img.imag-thumbnail(ng-src = "/images/heartAttack1.png")
+                        .detail
+                            h3 Heart Attack Card Game App
+                            p Using Time Synchronization Theory to build a time critical game called heart attack. 
+                            a.btn(href = "#project/heartAttack") View
+                .project-block(ng-repeat="project in projects")
+                    .project-item
+                        img.imag-thumbnail(ng-src = "{{project.imageUrl}}")
+                        .detail
+                            h3 {{project.name}}
+                            p Sed in molestie lectus. Curabitur non est neque. Maecenas id luctus ligula. Duis ac laoreet mi. Maecenas non lorem sed elit molestie tincidunt.
+                            span.btn View
