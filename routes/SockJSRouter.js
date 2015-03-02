@@ -35,11 +35,13 @@ SockJSRouter = (function() {
 	}
 
 	SockJSRouter.prototype.connection = function(conn, user) {
+        var inserted = false;
         for(var i = 0; i < sockjsRouterObj.connections.length; i++) {
-            if(sockjsRouterObj.connections[i] === undefined) sockjsRouterObj.connections[i] = conn;
-        } else {
-	        this.connections.push(conn);
+            if(sockjsRouterObj.connections[i] === undefined) {
+                sockjsRouterObj.connections[i] = conn;
+            }
         }
+        if(inserted == true) this.connections.push(conn);
 	    //join chat room
 	    this.chatRoom.join(user, conn);
 	};
